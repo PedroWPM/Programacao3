@@ -1,6 +1,6 @@
 public class Fibonacci {
     public static void main(String[] args) {
-        int n = 30; // Número de elementos a serem impressos
+        int n = 30; 
         long primeiro = 1, segundo = 1;
 
         System.out.print("Série de Fibonacci com " + n + " elementos:\n");
@@ -14,6 +14,6 @@ public class Fibonacci {
             segundo = proximo;
         }
 
-        System.out.println(); // Nova linha no final
+        System.out.println();
     }
 }
