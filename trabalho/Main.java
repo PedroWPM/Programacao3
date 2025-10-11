@@ -28,7 +28,7 @@ public class Main {
 
     private void createAndShowGui() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(900, 600);
+        frame.setSize(1400, 800);
         frame.setLocationRelativeTo(null);
 
         JPanel root = new JPanel(new BorderLayout());
