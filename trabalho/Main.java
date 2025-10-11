@@ -15,11 +15,11 @@ public class Main {
     private final JTextField searchField = new JTextField(20);
     private final JLabel statusLabel = new JLabel("Pronto");
 
-    // Cor de fundo pedida
+    
     private final Color fundo = Color.decode("#f9fc7e");
 
     public static void main(String[] args) {
-        // inicializa GUI na EDT
+        
         SwingUtilities.invokeLater(() -> {
             Main m = new Main();
             m.createAndShowGui();
@@ -35,7 +35,7 @@ public class Main {
         root.setBackground(fundo);
         frame.setContentPane(root);
 
-        // Top: controle
+        
         JPanel topPanel = new JPanel();
         topPanel.setBackground(fundo);
         JButton btnAdicionarLivro = new JButton("Adicionar Livro");
@@ -58,19 +58,19 @@ public class Main {
 
         root.add(topPanel, BorderLayout.NORTH);
 
-        // Center: tabela com rolagem
+        
         table.setFillsViewportHeight(true);
         JScrollPane scroll = new JScrollPane(table);
         scroll.getViewport().setBackground(fundo);
         root.add(scroll, BorderLayout.CENTER);
 
-        // Bottom: status
+        
         JPanel bottom = new JPanel(new BorderLayout());
         bottom.setBackground(fundo);
         bottom.add(statusLabel, BorderLayout.WEST);
         frame.add(bottom, BorderLayout.SOUTH);
 
-        // Actions
+        
         btnAdicionarLivro.addActionListener(e -> abrirDialogLivro());
         btnAdicionarFilme.addActionListener(e -> abrirDialogFilme());
 
@@ -124,7 +124,7 @@ public class Main {
             }
         });
 
-        // Preenche com alguns itens de exemplo (opcional)
+        
         try {
             gerenciador.adicionarItem(new Livro("Clean Code", "Boas práticas", LocalDate.now(), "Robert C. Martin", 464));
             gerenciador.adicionarItem(new Filme("Matrix", "Ficção científica", LocalDate.now(), "Wachowski", 136));
